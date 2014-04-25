@@ -1,0 +1,18 @@
+{
+    "name": "limesoda/limesoda_trailing-slashes",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "description": "Redirects product, category and CMS page URLs to their counterparts without trailing slashes.",
+    "homepage": "https://github.com/LimeSoda/LimeSoda_TrailingSlashes",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "require-dev": {
+    },
+    "authors":[
+        {
+            "name": "Matthias Zeis",
+            "email": "m.zeis@limesoda.com"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <web>
+            <groups>
+                <ls_trailingslashes translate="label comment" module="limesoda_trailingslashes">
+                    <label>Trailing Slashes</label>
+                    <comment><![CDATA[If enabled the corresponding page URLs with trailing / are redirected to URLs without / in the end.]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>25</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <http_status_code translate="label" module="limesoda_trailingslashes">
+                            <label>HTTP Status Code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>limesoda_trailingslashes/system_config_source_redirect</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </http_status_code>
+                        <category_view translate="label" module="limesoda_trailingslashes">
+                            <label>Category View</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </category_view>
+                        <cms_page_view translate="label" module="limesoda_trailingslashes">
+                            <label>CMS Page View</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cms_page_view>
+                        <product_view translate="label" module="limesoda_trailingslashes">
+                            <label>Product View</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_view>
+                    </fields>
+                </ls_trailingslashes>
+            </groups>
+        </web>
+    </sections>
+</config>
