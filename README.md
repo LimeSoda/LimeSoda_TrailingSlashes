@@ -17,6 +17,7 @@ Features:
 * enable/disable product page view redirects
 * enable/disable category page view redirects
 * enable/disable CMS page view redirects
+* enable redirects for arbitrary URL paths
 * Configure whether to use a 301 or 302 redirect
 
 Requirements
