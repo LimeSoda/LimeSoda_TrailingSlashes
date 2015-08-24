@@ -48,6 +48,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </product_view>
+                        <other_urls translate="label comment" module="limesoda_trailingslashes">
+                            <label>Other URLs</label>
+                            <comment><![CDATA[One path per line including slashes, e.g. <code>/reviews/</code>]]></comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </other_urls>
                     </fields>
                 </ls_trailingslashes>
             </groups>

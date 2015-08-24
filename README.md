@@ -4,7 +4,7 @@ Redirects product, category and CMS page URLs to their counterparts without trai
 
 Facts
 -----
-- version: 0.1.0
+- version: 0.2.0
 - [extension on GitHub](https://github.com/LimeSoda/LimeSoda_TrailingSlashes)
 
 Description

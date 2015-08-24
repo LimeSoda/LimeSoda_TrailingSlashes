@@ -2,7 +2,7 @@
 <config>
     <modules>
         <LimeSoda_TrailingSlashes>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </LimeSoda_TrailingSlashes>
     </modules>
     <default>
@@ -12,6 +12,7 @@
                 <category_view>0</category_view>
                 <cms_page_view>0</cms_page_view>
                 <product_view>0</product_view>
+                <other_urls />
             </ls_trailingslashes>
         </web>
     </default>
@@ -19,6 +20,14 @@
     </frontend>
     <global>
         <events>
+            <controller_action_predispatch>
+                <observers>
+                    <limesoda_trailingslashes>
+                        <class>limesoda_trailingslashes/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </limesoda_trailingslashes>
+                </observers>
+            </controller_action_predispatch>
             <controller_action_predispatch_catalog_category_view>
                 <observers>
                     <limesoda_trailingslashes>

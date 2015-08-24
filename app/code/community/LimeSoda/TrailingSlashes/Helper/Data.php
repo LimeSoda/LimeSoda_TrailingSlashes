@@ -20,6 +20,11 @@ class LimeSoda_TrailingSlashes_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * @var string
      */
+    const XML_PATH_OTHER_URLS = 'web/ls_trailingslashes/other_urls';
+
+    /**
+     * @var string
+     */
     const XML_PATH_PRODUCT_VIEW_ENABLED = 'web/ls_trailingslashes/product_view';
 
     /**
@@ -40,6 +45,18 @@ class LimeSoda_TrailingSlashes_Helper_Data extends Mage_Core_Helper_Abstract
     public function shouldRedirectCategoryView()
     {
         return Mage::getStoreConfigFlag(self::XML_PATH_CATEGORY_VIEW_ENABLED);
+    }
+
+    /**
+     * Returns whether the URL was specified to be redirected in the other URLs field.
+     *
+     * @param string $path
+     * @return bool
+     */
+    public function shouldRedirectOtherUrl($path)
+    {
+        $paths = explode("\n", Mage::getStoreConfig(self::XML_PATH_OTHER_URLS));
+        return in_array($path, $paths);
     }
 
     /**

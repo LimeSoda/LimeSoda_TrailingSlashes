@@ -22,6 +22,20 @@ class LimeSoda_TrailingSlashes_Model_Observer
      * @param Varien_Event_Observer $observer
      * @return LimeSoda_TrailingSlashes_Model_Observer
      */
+    public function controllerActionPredispatch(Varien_Event_Observer $observer)
+    {
+        $controller = $observer->getEvent()->getControllerAction();
+        $path = $controller->getRequest()->getPathInfo();
+        if (Mage::helper('limesoda_trailingslashes')->shouldRedirectOtherUrl($path)) {
+            $this->_redirect();
+        }
+        return $this;
+    }
+
+    /**
+     * @param Varien_Event_Observer $observer
+     * @return LimeSoda_TrailingSlashes_Model_Observer
+     */
     public function predispatchCatalogCategoryView(Varien_Event_Observer $observer)
     {
         if (Mage::helper('limesoda_trailingslashes')->shouldRedirectCategoryView()) {
